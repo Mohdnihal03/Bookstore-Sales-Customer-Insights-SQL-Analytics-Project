@@ -29,5 +29,18 @@ It includes SQL queries to analyze sales trends, track inventory, and identify h
 2. Run `bookstore_project.sql` to create tables and execute queries.
 3. Add sample data as needed for testing.
 
+## Example :
+- Find the top 3 most expensive book of 'Fantasy' genre
+select * from (
+select title ,
+genre,
+Rank() over(partition by genre order by SUM(price) DESC)
+from books
+group by genre, title
+	) as ranked
+	where genre = 'Fantasy'
+	limit 3;
+
 ## 📄 Author
-Your Name — [LinkedIn Profile](https://linkedin.com/in/yourprofile)
+Your Name — [Mohammed Nihal](https://linkedin.com/in/Mohdnihal03)
+

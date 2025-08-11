@@ -30,7 +30,7 @@ It includes SQL queries to analyze sales trends, track inventory, and identify h
 3. Add sample data as needed for testing.
 
 ## Example :
-- Find the top 3 most expensive book of 'Fantasy' genre
+- Find the top 3 most expensive book of 'Fantasy' genre \n
 select * from (
 select title ,
 genre,
@@ -43,4 +43,5 @@ group by genre, title
 
 ## 📄 Author
 Your Name — [Mohammed Nihal](https://linkedin.com/in/Mohdnihal03)
+
 
